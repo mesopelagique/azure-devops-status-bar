@@ -17,7 +17,7 @@ struct WorkItem: Codable, Hashable {
 }
 
 public struct Link: Codable {
-    let href: String
+    public let href: String
 }
 
 public struct WorkItemFull: Codable, Equatable {
@@ -38,19 +38,6 @@ public extension WorkItemFull {
     }
     var state: String {
         return fields["System.State"]?.value as? String ?? ""
-    }
-    var stateIcon: String {
-        switch state {
-        case "Active": return "🔵"
-        case "Proposed": return "🔘"
-        case "Closed": return "🟢"
-        case "Rejected": return "🗑"
-        case "Pending": return "🌕"
-        case "Planned": return "📆"
-        case "In Progress": return "🏗"
-        default:
-            return "🥷"
-        }
     }
     var type: String {
         return fields["System.WorkItemType"]?.value as? String ?? ""
