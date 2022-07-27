@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Appify",
+        "repositoryURL": "https://github.com/phimage/Appify.git",
+        "state": {
+          "branch": null,
+          "revision": "ad09527be0c99e33f1ce2896a536a13babe36f85",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "Prephirences",
+        "repositoryURL": "https://github.com/phimage/Prephirences.git",
+        "state": {
+          "branch": "master",
+          "revision": "a896a59f5f961baa7347aa19822fb627d75f9ef9",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-case-paths",
+        "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
+        "state": {
+          "branch": null,
+          "revision": "fb733d87aabb5b053ad782902f2f3d67e0a65ac5",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "swift-composable-architecture",
+        "repositoryURL": "https://github.com/pointfreeco/swift-composable-architecture.git",
+        "state": {
+          "branch": null,
+          "revision": "1005bbd39347f5cc6e993d25a1c0ffe52b8f42d4",
+          "version": "0.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
