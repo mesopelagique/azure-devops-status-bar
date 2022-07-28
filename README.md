@@ -7,9 +7,6 @@
 
 ![](AppScreenshot.png)
 
-ie. reproduce the [Open Recent Databases menu](https://doc.4d.com/4Dv18R6/4D/18-R6/Connecting-to-a-4D-Server-Database.300-5360760.en.html) of 4D but for all versions and without an already opened 4D app
-
-
 ## Install
 
 Get it from latest [release](https://github.com/mesopelagique/azure-devops-status-bar/releases/latest/download/azure-devops-status-bar.app.zip) and move it to your `/Applications` folder.
@@ -25,15 +22,14 @@ curl -sL https://mesopelagique.github.io/azure-devops-status-bar/install.sh | ba
 In menu choose setting to enter your credentials as follow
 
 ```
-user@mail:personal access token
+user@mail.com:personal access token
 ```
 
 [personal access token](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
 
 ### to use with custom organisation and project on azure
 
-edit code in Favorites
-
+edit code in Favorites.swift or dev UI #1
 
 ## Start at login?
 
