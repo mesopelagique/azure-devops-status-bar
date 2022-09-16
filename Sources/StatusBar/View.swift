@@ -32,7 +32,11 @@ public final class View {
         menu.items = []
         if !viewState.urls.isEmpty {
             let urls = viewState.urls
-            menu.items.append(contentsOf: urls.map(menuItem(for:)))
+            menu.items.append(contentsOf: urls.flatMap { item in
+                return [menuItem(for: item), shiftMenuItem(for: item)]
+            }
+            )
+            menu.items.append(contentsOf: urls.map(shiftMenuItem(for:)))
             menu.items.append(.separator())
         }
         menu.items.append(MenuItem(title: "Settings", action: { [weak self] in
@@ -55,6 +59,22 @@ public final class View {
             }
         })
         menuItem.image = item.stateImage
+
+        return menuItem
+    }
+
+    private func shiftMenuItem(for item: WorkItemFull) -> NSMenuItem {
+        let menuItem = MenuItem(title:"Copy azure:\(item.id) to pasteboard", action: {
+            let pasteboard = NSPasteboard.general
+            pasteboard.declareTypes([.string], owner: nil)
+            if !pasteboard.setString("azure:\(item.id)", forType: .string) {
+                print("not able to set in pasteboard")
+            }
+        })
+        menuItem.isAlternate = true
+        menuItem.keyEquivalentModifierMask = .shift
+        menuItem.image = item.stateImage
+
         return menuItem
     }
 
