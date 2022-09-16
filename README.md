@@ -7,6 +7,8 @@
 
 ![](AppScreenshot.png)
 
+Maintain `Shift` key and it will copy item it in pasteboard instead of opening the page
+
 ## Install
 
 Get it from latest [release](https://github.com/mesopelagique/azure-devops-status-bar/releases/latest/download/azure-devops-status-bar.app.zip) and move it to your `/Applications` folder.
