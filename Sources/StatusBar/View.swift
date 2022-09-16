@@ -92,6 +92,8 @@ public extension WorkItemFull {
             return.closed
         case "Rejected":
             return .rejected
+        case "Resolved":
+            return .resolved
         case "Pending":
             return .pending
         case "Planned":
@@ -132,6 +134,7 @@ extension NSColor {
     static let active: NSColor = NSColor(calibratedRed: 0, green: 122/255.0, blue: 204/255.0, alpha: 1)
     static let closed: NSColor = NSColor(calibratedRed: 178/255.0, green: 178, blue: 178, alpha: 1)
     static let rejected: NSColor = NSColor(calibratedRed: 86/255.0, green: 136/255.0, blue: 223/255.0, alpha: 1)
+    static let resolved: NSColor = NSColor(calibratedRed: 255/255.0, green: 158/255.0, blue: 0/255.0, alpha: 1)
     static let pending: NSColor = NSColor(calibratedRed: 242/255.0, green: 102/255.0, blue: 186/255.0, alpha: 1)
     static let planned: NSColor = NSColor(calibratedRed: 34/255.0, green: 34/255.0, blue: 34/255.0, alpha: 1)
     static let inProgress: NSColor = NSColor(calibratedRed: 86/255.0, green: 136/255.0, blue: 223/255.0, alpha: 1)
@@ -145,6 +148,7 @@ extension NSImage {
     static let active: NSImage? = circleFill?.image(with: .active)
     static let closed: NSImage? = circleFill?.image(with: .closed)
     static let rejected: NSImage? = circle?.image(with: .rejected)
+    static let resolved: NSImage? = circle?.image(with: .resolved)
     static let pending: NSImage? = circleFill?.image(with: .pending)
     static let planned: NSImage? = circleFill?.image(with: .planned)
     static let inProgress: NSImage? = circleFill?.image(with: .inProgress)
